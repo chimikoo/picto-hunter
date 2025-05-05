@@ -63,7 +63,7 @@ export default function PictoChecklist({ pictoIds }: Props) {
           </div>
         </div>
 
-        <div className="mb-6">
+        <div className="mb-6 p-4">
           <div className="flex flex-wrap gap-2">
             <button onClick={() => setFilter("all")} className={`filter-button ${filter === "all" ? "active" : ""}`}>
               All
@@ -86,7 +86,7 @@ export default function PictoChecklist({ pictoIds }: Props) {
         {filteredIds.length === 0 ? (
           <p className="text-gray-400 italic text-center py-8">No pictos match the current filter.</p>
         ) : (
-          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 p-4">
             {filteredIds.map((id) => {
               const picto = pictoMap[id]
               if (!picto) return null

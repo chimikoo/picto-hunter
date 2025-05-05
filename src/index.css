@@ -22,6 +22,10 @@ body {
   margin: 0;                   /* Remove default margin */
 }
 
+li {
+  list-style-type: none;
+}
+
 /* Custom component styles without using @apply */
 .expedition-button {
   position: relative;
@@ -448,8 +452,6 @@ main::before {
   background-repeat: no-repeat;
 }
 
-
-/* Responsive grid */
 @media (min-width: 640px) {
   .sm\:w-64 {
     width: 16rem;
