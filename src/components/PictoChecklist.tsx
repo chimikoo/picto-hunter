@@ -9,7 +9,7 @@ type Props = {
   pictoIds: string[]
 }
 
-export default function PictoChecklist({ buildId, pictoIds }: Props) {
+export default function PictoChecklist({ pictoIds }: Props) {
   const [checked, setChecked] = useState<{ [key: string]: boolean }>({})
   const [loaded, setLoaded] = useState(false)
   const [filter, setFilter] = useState<"all" | "checked" | "unchecked">("all")
@@ -42,7 +42,6 @@ export default function PictoChecklist({ buildId, pictoIds }: Props) {
 
   return (
     <div className="darker-bg p-6 border darkgold-border relative overflow-hidden">
-      {/* Add subtle diagonal lines in the background */}
       <div
         className="absolute inset-0 opacity-5"
         style={{
